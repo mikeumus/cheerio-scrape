@@ -1,0 +1,13 @@
+div(data-role='page')
+    header(data-role='header')
+        h1= title
+    div(data-role='content')
+        - if(items.length)
+            ul(data-role='listview')
+                - items.forEach(function(item){
+                    li
+                        a(href='/watch/' + item['urlObj'].query.v, title=item['title'])
+                            img(src=item['thumbnail'], alt='Thumbnail')
+                            h3= item['title']
+                            h5= item['time']
+                - })
