@@ -4,7 +4,7 @@
  */
 
 var express = require('express')
-, jsdom = require('cheerio')
+, cheerio = require('cheerio')
 , request = require('request')
 , url = require('url')
 , app = module.exports = express.createServer();
